@@ -1,0 +1,766 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0512.1636                               -->
+<workbook original-version='18.1' source-build='2026.1.2 (20261.26.0512.1636)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='predictions_tableau' inline='true' name='federated.018rklu1j8nx3s18s7kbj0ryc14x' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='predictions_tableau' name='textscan.0k5pxiq1mym3uj110as710vg063w'>
+            <connection class='textscan' directory='E:/Future Interns/Task 1 - Sales &amp; Demand Forecasting for Businesses' filename='predictions_tableau.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0k5pxiq1mym3uj110as710vg063w' name='predictions_tableau.csv' table='[predictions_tableau#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='Days' ordinal='0' />
+            <column datatype='integer' name='Date' ordinal='1' />
+            <column datatype='real' name='Actual Sales' ordinal='2' />
+            <column datatype='real' name='Predicted Sales' ordinal='3' />
+            <column datatype='real' name='Residual' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[predictions_tableau.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Days</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Days]</local-name>
+            <parent-name>[predictions_tableau.csv]</parent-name>
+            <remote-alias>Days</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[predictions_tableau.csv_E637E7E9534A4627ABE0EE6150BC7973]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[predictions_tableau.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[predictions_tableau.csv_E637E7E9534A4627ABE0EE6150BC7973]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Actual Sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Actual Sales]</local-name>
+            <parent-name>[predictions_tableau.csv]</parent-name>
+            <remote-alias>Actual Sales</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[predictions_tableau.csv_E637E7E9534A4627ABE0EE6150BC7973]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Predicted Sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Predicted Sales]</local-name>
+            <parent-name>[predictions_tableau.csv]</parent-name>
+            <remote-alias>Predicted Sales</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[predictions_tableau.csv_E637E7E9534A4627ABE0EE6150BC7973]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Residual</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Residual]</local-name>
+            <parent-name>[predictions_tableau.csv]</parent-name>
+            <remote-alias>Residual</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[predictions_tableau.csv_E637E7E9534A4627ABE0EE6150BC7973]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' name='[Actual Sales]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Predicted Sales]' role='measure' type='quantitative' />
+      <column caption='predictions_tableau.csv' datatype='table' name='[__tableau_internal_object_id__].[predictions_tableau.csv_E637E7E9534A4627ABE0EE6150BC7973]' role='measure' type='quantitative' />
+      <column-instance column='[Predicted Sales]' derivation='None' name='[none:Predicted Sales:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Actual Sales]' derivation='Sum' name='[sum:Actual Sales:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Predicted Sales]' derivation='Sum' name='[sum:Predicted Sales:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_1xsdqyh007fac91gtijjd00a1ic1.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/25/2026 07:15:11 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Days</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Days]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Days</remote-alias>
+              <ordinal>0</ordinal>
+              <family>predictions_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>248</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[predictions_tableau.csv_E637E7E9534A4627ABE0EE6150BC7973]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>predictions_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>248</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[predictions_tableau.csv_E637E7E9534A4627ABE0EE6150BC7973]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Actual Sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Actual Sales]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Actual Sales</remote-alias>
+              <ordinal>2</ordinal>
+              <family>predictions_tableau.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>248</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[predictions_tableau.csv_E637E7E9534A4627ABE0EE6150BC7973]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Predicted Sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Predicted Sales]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Predicted Sales</remote-alias>
+              <ordinal>3</ordinal>
+              <family>predictions_tableau.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>248</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[predictions_tableau.csv_E637E7E9534A4627ABE0EE6150BC7973]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Residual</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Residual]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Residual</remote-alias>
+              <ordinal>4</ordinal>
+              <family>predictions_tableau.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>248</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[predictions_tableau.csv_E637E7E9534A4627ABE0EE6150BC7973]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.018rklu1j8nx3s18s7kbj0ryc14x].[sum:Actual Sales:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.018rklu1j8nx3s18s7kbj0ryc14x].[none:Predicted Sales:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.018rklu1j8nx3s18s7kbj0ryc14x].[sum:Predicted Sales:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='predictions_tableau.csv' id='predictions_tableau.csv_E637E7E9534A4627ABE0EE6150BC7973'>
+            <properties context=''>
+              <relation connection='textscan.0k5pxiq1mym3uj110as710vg063w' name='predictions_tableau.csv' table='[predictions_tableau#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='Days' ordinal='0' />
+                  <column datatype='integer' name='Date' ordinal='1' />
+                  <column datatype='real' name='Actual Sales' ordinal='2' />
+                  <column datatype='real' name='Predicted Sales' ordinal='3' />
+                  <column datatype='real' name='Residual' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='feature_importance' inline='true' name='federated.1rfp5ot19gzmls1dtz1wv1r9oqjb' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='feature_importance' name='textscan.19dahul0iarc031cpo9r91lteppv'>
+            <connection class='textscan' directory='E:/Future Interns/Task 1 - Sales &amp; Demand Forecasting for Businesses' filename='feature_importance.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.19dahul0iarc031cpo9r91lteppv' name='feature_importance.csv' table='[feature_importance#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='Feature' ordinal='1' />
+            <column datatype='integer' name='Importance' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[feature_importance.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[feature_importance.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[feature_importance.csv_784B93DE4D5648A69C5440474B3744C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Feature</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Feature]</local-name>
+            <parent-name>[feature_importance.csv]</parent-name>
+            <remote-alias>Feature</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[feature_importance.csv_784B93DE4D5648A69C5440474B3744C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Importance</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Importance]</local-name>
+            <parent-name>[feature_importance.csv]</parent-name>
+            <remote-alias>Importance</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[feature_importance.csv_784B93DE4D5648A69C5440474B3744C1]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='feature_importance.csv' datatype='table' name='[__tableau_internal_object_id__].[feature_importance.csv_784B93DE4D5648A69C5440474B3744C1]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_19c9q0e0xhwwkt17j6y830snpgy6.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/25/2026 07:20:17 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>feature_importance.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>22</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[feature_importance.csv_784B93DE4D5648A69C5440474B3744C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Feature</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Feature]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Feature</remote-alias>
+              <ordinal>1</ordinal>
+              <family>feature_importance.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>22</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[feature_importance.csv_784B93DE4D5648A69C5440474B3744C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Importance</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Importance]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Importance</remote-alias>
+              <ordinal>2</ordinal>
+              <family>feature_importance.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[feature_importance.csv_784B93DE4D5648A69C5440474B3744C1]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='feature_importance.csv' id='feature_importance.csv_784B93DE4D5648A69C5440474B3744C1'>
+            <properties context=''>
+              <relation connection='textscan.19dahul0iarc031cpo9r91lteppv' name='feature_importance.csv' table='[feature_importance#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='Feature' ordinal='1' />
+                  <column datatype='integer' name='Importance' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Actual vs Predicted Sales'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' italic='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='predictions_tableau' name='federated.018rklu1j8nx3s18s7kbj0ryc14x' />
+          </datasources>
+          <datasource-dependencies datasource='federated.018rklu1j8nx3s18s7kbj0ryc14x'>
+            <column datatype='real' name='[Actual Sales]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Days]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Predicted Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Days]' derivation='None' name='[none:Days:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Actual Sales]' derivation='Sum' name='[sum:Actual Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Predicted Sales]' derivation='Sum' name='[sum:Predicted Sales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.018rklu1j8nx3s18s7kbj0ryc14x].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.018rklu1j8nx3s18s7kbj0ryc14x].[sum:Predicted Sales:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.018rklu1j8nx3s18s7kbj0ryc14x].[sum:Actual Sales:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.018rklu1j8nx3s18s7kbj0ryc14x].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.018rklu1j8nx3s18s7kbj0ryc14x].[sum:Predicted Sales:qk]&quot;</bucket>
+              <bucket>&quot;[federated.018rklu1j8nx3s18s7kbj0ryc14x].[sum:Actual Sales:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.018rklu1j8nx3s18s7kbj0ryc14x].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.018rklu1j8nx3s18s7kbj0ryc14x].[Multiple Values]' scope='rows' value='Sales' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.018rklu1j8nx3s18s7kbj0ryc14x].[Multiple Values]' palette='green_blue_white_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.018rklu1j8nx3s18s7kbj0ryc14x].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.018rklu1j8nx3s18s7kbj0ryc14x].[Multiple Values]</rows>
+        <cols>[federated.018rklu1j8nx3s18s7kbj0ryc14x].[none:Days:qk]</cols>
+      </table>
+      <simple-id uuid='{C87EF53B-C75C-4CD0-9930-0A0B5AF24808}' />
+    </worksheet>
+    <worksheet name='Feature Importance'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' italic='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='feature_importance' name='federated.1rfp5ot19gzmls1dtz1wv1r9oqjb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1rfp5ot19gzmls1dtz1wv1r9oqjb'>
+            <column datatype='string' name='[Feature]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Importance]' role='measure' type='quantitative' />
+            <column-instance column='[Feature]' derivation='None' name='[none:Feature:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Importance]' derivation='Sum' name='[sum:Importance:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1rfp5ot19gzmls1dtz1wv1r9oqjb].[none:Feature:nk]' direction='DESC' using='[federated.1rfp5ot19gzmls1dtz1wv1r9oqjb].[sum:Importance:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1rfp5ot19gzmls1dtz1wv1r9oqjb].[sum:Importance:qk]' palette='blue_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1rfp5ot19gzmls1dtz1wv1r9oqjb].[sum:Importance:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1rfp5ot19gzmls1dtz1wv1r9oqjb].[none:Feature:nk]</rows>
+        <cols>[federated.1rfp5ot19gzmls1dtz1wv1r9oqjb].[sum:Importance:qk]</cols>
+      </table>
+      <simple-id uuid='{7886D627-A296-4738-A9B5-8D6CB7DD5229}' />
+    </worksheet>
+    <worksheet name='Residual Plot'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' italic='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='predictions_tableau' name='federated.018rklu1j8nx3s18s7kbj0ryc14x' />
+          </datasources>
+          <datasource-dependencies datasource='federated.018rklu1j8nx3s18s7kbj0ryc14x'>
+            <column datatype='real' name='[Predicted Sales]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Residual]' role='measure' type='quantitative' />
+            <column-instance column='[Predicted Sales]' derivation='None' name='[none:Predicted Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Residual]' derivation='None' name='[none:Residual:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+          </pane>
+        </panes>
+        <rows>[federated.018rklu1j8nx3s18s7kbj0ryc14x].[none:Residual:qk]</rows>
+        <cols>[federated.018rklu1j8nx3s18s7kbj0ryc14x].[none:Predicted Sales:qk]</cols>
+      </table>
+      <simple-id uuid='{84B1B024-07E9-43D6-BF57-ACD6960ACA78}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Sales Regression'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontname='Wide Latin'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='860' maxwidth='1350' minheight='560' minwidth='420' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='5' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98122' id='8' param='vert' type-v2='layout-flow' w='98814' x='593' y='939'>
+            <zone h='5282' id='9' type-v2='title' w='98814' x='593' y='939'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='92840' id='6' type-v2='layout-basic' w='98814' x='593' y='6221' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='33333' id='3' name='Actual vs Predicted Sales' w='42296' x='1556' y='8803' />
+        <zone h='6221' id='4' name='Actual vs Predicted Sales' pane-specification-id='2' param='[federated.018rklu1j8nx3s18s7kbj0ryc14x].[:Measure Names]' show-title='false' type-v2='color' w='10370' x='24519' y='8451' />
+        <zone h='57746' id='10' name='Feature Importance' w='33333' x='741' y='40141' />
+        <zone h='6690' id='11' name='Feature Importance' pane-specification-id='0' param='[federated.1rfp5ot19gzmls1dtz1wv1r9oqjb].[sum:Importance:qk]' type-v2='color' w='10370' x='21778' y='56808' />
+        <zone h='33333' id='12' name='Residual Plot' w='48667' x='46074' y='7981' />
+        <zone h='48944' id='13' is-scaled='1' param='Image/feature_correlation.png' type-v2='bitmap' w='51407' x='38296' y='42958' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontname='Wide Latin'>&lt;Sheet Name&gt;</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1400' minheight='1400' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='17' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98122' id='16' param='vert' type-v2='layout-flow' w='98814' x='593' y='939'>
+                <zone h='5282' id='9' type-v2='title' w='98814' x='593' y='939'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='33333' id='12' is-fixed='true' name='Residual Plot' w='48667' x='46074' y='7981'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='33333' id='3' is-fixed='true' name='Actual vs Predicted Sales' w='42296' x='1556' y='8803'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6221' id='4' name='Actual vs Predicted Sales' pane-specification-id='2' param='[federated.018rklu1j8nx3s18s7kbj0ryc14x].[:Measure Names]' show-title='false' type-v2='color' w='10370' x='24519' y='8451'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='57746' id='10' is-fixed='true' name='Feature Importance' w='33333' x='741' y='40141'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6690' id='11' name='Feature Importance' pane-specification-id='0' param='[federated.1rfp5ot19gzmls1dtz1wv1r9oqjb].[sum:Importance:qk]' type-v2='color' w='10370' x='21778' y='56808'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48944' id='13' is-fixed='true' is-scaled='1' param='Image/feature_correlation.png' type-v2='bitmap' w='51407' x='38296' y='42958'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{BD304CF9-8B7F-4124-98C1-DE64E6D1ADED}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='63'>
+    <window class='worksheet' maximized='true' name='Actual vs Predicted Sales'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.018rklu1j8nx3s18s7kbj0ryc14x].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8A42EA28-5D79-45AA-8938-A3DC76941376}' />
+    </window>
+    <window class='dashboard' name='Sales Regression'>
+      <viewpoints>
+        <viewpoint name='Actual vs Predicted Sales'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Feature Importance' />
+        <viewpoint name='Residual Plot'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{887B6BB4-5AC1-4D26-887B-4DE777C80D78}' />
+    </window>
+    <window class='worksheet' name='Feature Importance'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1rfp5ot19gzmls1dtz1wv1r9oqjb].[sum:Importance:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B49BF7E8-9C25-4D29-A452-935413B20BDB}' />
+    </window>
+    <window class='worksheet' name='Residual Plot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0EFF1792-A068-4144-80AF-92150B2C2AC7}' />
+    </window>
+  </windows>
+</workbook>

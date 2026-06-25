@@ -1,186 +1,378 @@
-# FUTURE_ML_01
-Sales &amp; Demand Forecasting for Businesses
-# Sales Forecasting Using Machine Learning
+\# Sales Forecasting Using Machine Learning
 
-## Project Overview
+
+
+\## Project Overview
+
+
 
 This project develops a machine learning-based sales forecasting system to predict future sales using historical sales data. The model identifies sales patterns, seasonality, trends, and lag-based relationships to generate accurate future sales predictions.
 
+
+
 The project also includes Tableau dashboards and data visualizations to help businesses understand sales performance and forecast future demand.
 
----
 
-## Objectives
 
-- Analyze historical sales data
-- Build a forecasting model
-- Predict future sales
-- Visualize sales trends and forecasts
-- Support business planning and decision-making
+\---
 
----
 
-## Tech Stack
 
-- Python
-- Pandas
-- NumPy
-- Scikit-Learn
-- lightgbm
-- Matplotlib
-- Seaborn
-- joblib
-- Tableau
+\## Objectives
 
----
 
-## Files 
-Sample - Superstore.csv : Input file 
----
 
-## Project Structure
+\- Analyze historical sales data
 
-FUTURE_ML_01/
+\- Build a forecasting model
+
+\- Predict future sales
+
+\- Visualize sales trends and forecasts
+
+\- Support business planning and decision-making
+
+
+
+\---
+
+
+
+\## Tech Stack
+
+
+
+\- Python
+
+\- Pandas
+
+\- NumPy
+
+\- Scikit-Learn
+
+\- lightgbm
+
+\- Matplotlib
+
+\- Seaborn
+
+\- joblib
+
+\- Tableau
+
+
+
+\---
+
+
+
+\## Files
+
+Sample - Superstore.csv : Input file
+
+\---
+
+
+
+\## Project Structure
+
+
+
+FUTURE\_ML\_01/
+
+
 
 ├── data/
 
+
+
 ├── notebook/
+
+
 
 ├── plots/
 
-├── tableau_dashboard/
+
+
+├── tableau\_dashboard/
+
+
 
 ├── README.md
 
+
+
 └── requirements.txt
 
----
 
-## Features Used
 
-### Calendar Features
-- Year
-- Month
-- Day
-- Day of Week
-- Quarter
-- Time Index
+\---
 
-### Lag Features
-- Lag_1
-- Lag_7
-- Lag_14
-- Lag_30
 
-### Rolling Statistics Features
-- Rolling_14
-- Lag_7_Rolling_Mean
-- Lag_14_Rolling_Std
-- Expanding Mean
 
-### Sales Aggregation Features
-- Average Weekly Sales
-- Quantity
-- Quantity × Average Weekly Sales
+\## Features Used
 
-### Seasonal Features
-- Season
 
-### Cyclical Date Features
-- Month Sin
-- Month Cos
-- Day of Week Sin
-- Day of Week Cos
----
 
-## Visualizations
+\### Calendar Features
 
-### Matplotlib Visualizations
+\- Year
 
-- actual_vs_predicted_sales  
-- Average Sales by Season  
-- daily_sales  
-- feature_correlation  
-- feature_importance  
-- monthly_sales  
-- residual_plot  
-- sales_by_category  
-- sales_by_region  
-- sales_forecast  
-- sales_forecast_chart  
-- sales_forecast_residual  
-- sales_forecast_residual_7_days
----
+\- Month
 
-### Tableau Dashboards
+\- Day
 
-- Sales Forecasting  
-- Sales history dashboard    
-- Sales Regression  
----
+\- Day of Week
 
-## Forecast Interpretation
+\- Quarter
+
+\- Time Index
+
+
+
+\### Lag Features
+
+\- Lag\_1
+
+\- Lag\_7
+
+\- Lag\_14
+
+\- Lag\_30
+
+
+
+\### Rolling Statistics Features
+
+\- Rolling\_14
+
+\- Lag\_7\_Rolling\_Mean
+
+\- Lag\_14\_Rolling\_Std
+
+\- Expanding Mean
+
+
+
+\### Sales Aggregation Features
+
+\- Average Weekly Sales
+
+\- Quantity
+
+\- Quantity × Average Weekly Sales
+
+
+
+\### Seasonal Features
+
+\- Season
+
+
+
+\### Cyclical Date Features
+
+\- Month Sin
+
+\- Month Cos
+
+\- Day of Week Sin
+
+\- Day of Week Cos
+
+\---
+
+
+
+\## Visualizations
+
+
+
+\### Matplotlib Visualizations
+
+
+
+\- actual\_vs\_predicted\_sales
+
+\- Average Sales by Season
+
+\- daily\_sales
+
+\- feature\_correlation
+
+\- feature\_importance
+
+\- monthly\_sales
+
+\- residual\_plot
+
+\- sales\_by\_category
+
+\- sales\_by\_region
+
+\- sales\_forecast
+
+\- sales\_forecast\_chart
+
+\- sales\_forecast\_residual
+
+\- sales\_forecast\_residual\_7\_days
+
+\---
+
+
+
+\### Tableau Dashboards
+
+
+
+\- Sales Forecasting
+
+\- Sales history dashboard
+
+\- Sales Regression
+
+\---
+
+
+
+\## Forecast Interpretation
+
+
 
 The forecasting model predicts future sales based on historical sales patterns and seasonal trends.
 
+
+
 Businesses can use these forecasts for:
 
-- Inventory planning
-- Resource allocation
-- Revenue forecasting
-- Marketing campaign planning
-- Supply chain optimization
 
----
 
-## Business Impact
+\- Inventory planning
+
+\- Resource allocation
+
+\- Revenue forecasting
+
+\- Marketing campaign planning
+
+\- Supply chain optimization
+
+
+
+\---
+
+
+
+\## Business Impact
+
+
 
 This solution enables businesses to make proactive decisions by anticipating future demand instead of reacting to changes after they occur.
 
+
+
 Benefits include:
 
-- Reduced stock shortages
-- Better inventory management
-- Improved budgeting
-- More efficient operations
-- Data-driven decision making
 
----
 
-## Model Output
+\- Reduced stock shortages
+
+\- Better inventory management
+
+\- Improved budgeting
+
+\- More efficient operations
+
+\- Data-driven decision making
+
+
+
+\---
+
+
+
+\## Model Output
+
+
 
 The model generates future sales predictions that can be used to estimate demand for upcoming days and support business planning activities.
 
----
 
-## How to Run
 
-1. Clone the repository
+\---
 
-git clone <repository-link>
 
-2. Install dependencies
 
-pip install -r requirements.txt
+\## How to Run
 
-3. Open the notebook
 
-- task_1_feat_engg.ipynb  
-- task_1_prediction.ipynb  
-- task 1 train_test.ipynb
 
-4. Run all cells to reproduce results
 
----
 
-## To install requirements
+1\. Install dependencies
+
+
 
 pip install -r requirements.txt
 
----
 
-## Author
+
+2\. Open the notebook
+
+
+
+\- task\_1\_feat\_engg.ipynb
+
+\- task\_1\_prediction.ipynb
+
+\- task 1 train\_test.ipynb
+
+
+
+3\. Run all cells to reproduce results
+
+
+
+\---
+
+
+
+\## Dashboard Preview
+
+
+
+!\[Sales history dashboard](tableau\_dashboard/Sales history dashboard.png)
+
+
+
+!\[Sales Regression](tableau\_dashboard/Sales Regression.png)
+
+
+
+!\[Sales Forecasting](tableau\_dashboard/Sales Forecasting.png)
+
+
+
+\## To install requirements
+
+
+
+pip install -r requirements.txt
+
+
+
+\---
+
+
+
+\## Author
+
+
 
 OVIYAA A J
 
+
+
 Future Interns - Machine Learning Track
+

@@ -1,0 +1,2016 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0512.1636                               -->
+<workbook original-version='18.1' source-build='2026.1.2 (20261.26.0512.1636)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='future_sales_100' inline='true' name='federated.0x06hic14s4b3u13tdxif0vhgxwi' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='future_sales_100' name='textscan.01ctnwj0kdk2zk14q2hl60bbe6wk'>
+            <connection class='textscan' directory='Data/Task 1 - Sales &amp; Demand Forecasting for Businesses' filename='future_sales_100.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.01ctnwj0kdk2zk14q2hl60bbe6wk' name='future_sales_100.csv' table='[future_sales_100#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='Year' ordinal='0' />
+            <column datatype='integer' name='Month' ordinal='1' />
+            <column datatype='integer' name='Day' ordinal='2' />
+            <column datatype='integer' name='Day of week' ordinal='3' />
+            <column datatype='integer' name='Quarter' ordinal='4' />
+            <column datatype='integer' name='Time_Index' ordinal='5' />
+            <column datatype='real' name='Lag_1' ordinal='6' />
+            <column datatype='real' name='Lag_7' ordinal='7' />
+            <column datatype='real' name='Lag_14' ordinal='8' />
+            <column datatype='real' name='Lag_30' ordinal='9' />
+            <column datatype='real' name='Rolling_14' ordinal='10' />
+            <column datatype='real' name='Avg of week' ordinal='11' />
+            <column datatype='real' name='Lag_7_rolling_mean' ordinal='12' />
+            <column datatype='real' name='Lag_14_rolling_std' ordinal='13' />
+            <column datatype='integer' name='Quantity' ordinal='14' />
+            <column datatype='real' name='Qty_x_AvgWeek' ordinal='15' />
+            <column datatype='real' name='month_sin' ordinal='16' />
+            <column datatype='real' name='month_cos' ordinal='17' />
+            <column datatype='real' name='dow_sin' ordinal='18' />
+            <column datatype='real' name='dow_cos' ordinal='19' />
+            <column datatype='string' name='Season' ordinal='20' />
+            <column datatype='real' name='expanding_mean' ordinal='21' />
+            <column datatype='date' name='Date' ordinal='22' />
+            <column datatype='real' name='Predicted Sales' ordinal='23' />
+            <column datatype='real' name='error' ordinal='24' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Month]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Month</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Day</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Day]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Day</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Day of week</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Day of week]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Day of week</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quarter</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quarter]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Quarter</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Time_Index</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Time_Index]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Time_Index</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lag_1</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Lag_1]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Lag_1</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lag_7</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Lag_7]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Lag_7</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lag_14</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Lag_14]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Lag_14</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lag_30</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Lag_30]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Lag_30</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rolling_14</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Rolling_14]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Rolling_14</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg of week</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Avg of week]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Avg of week</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lag_7_rolling_mean</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Lag_7_rolling_mean]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Lag_7_rolling_mean</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lag_14_rolling_std</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Lag_14_rolling_std]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Lag_14_rolling_std</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quantity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quantity]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Quantity</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Qty_x_AvgWeek</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Qty_x_AvgWeek]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Qty_x_AvgWeek</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_sin</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[month_sin]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>month_sin</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_cos</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[month_cos]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>month_cos</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dow_sin</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[dow_sin]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>dow_sin</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dow_cos</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[dow_cos]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>dow_cos</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Season</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Season]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Season</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>expanding_mean</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[expanding_mean]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>expanding_mean</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Predicted Sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Predicted Sales]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>Predicted Sales</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[error]</local-name>
+            <parent-name>[future_sales_100.csv]</parent-name>
+            <remote-alias>error</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Day]' role='dimension' type='quantitative' />
+      <column caption='Lag 14' datatype='real' name='[Lag_14]' role='measure' type='quantitative' />
+      <column caption='Lag 14 rolling std' datatype='real' name='[Lag_14_rolling_std]' role='measure' type='quantitative' />
+      <column caption='Lag 1' datatype='real' name='[Lag_1]' role='measure' type='quantitative' />
+      <column caption='Lag 30' datatype='real' name='[Lag_30]' role='measure' type='quantitative' />
+      <column caption='Lag 7' datatype='real' name='[Lag_7]' role='measure' type='quantitative' />
+      <column caption='Lag 7 rolling mean' datatype='real' name='[Lag_7_rolling_mean]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+      <column caption='Qty x AvgWeek' datatype='real' name='[Qty_x_AvgWeek]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Quarter]' role='dimension' type='quantitative' />
+      <column caption='Rolling 14' datatype='real' name='[Rolling_14]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Season]' role='dimension' type='nominal' />
+      <column caption='Time Index' datatype='integer' name='[Time_Index]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='future_sales_100.csv' datatype='table' name='[__tableau_internal_object_id__].[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]' role='measure' type='quantitative' />
+      <column caption='Dow Cos' datatype='real' name='[dow_cos]' role='measure' type='quantitative' />
+      <column caption='Dow Sin' datatype='real' name='[dow_sin]' role='measure' type='quantitative' />
+      <column caption='Error' datatype='real' name='[error]' role='measure' type='quantitative' />
+      <column caption='Expanding Mean' datatype='real' name='[expanding_mean]' role='measure' type='quantitative' />
+      <column caption='Month Cos' datatype='real' name='[month_cos]' role='dimension' type='quantitative' />
+      <column caption='Month Sin' datatype='real' name='[month_sin]' role='dimension' type='quantitative' />
+      <column-instance column='[Season]' derivation='None' name='[none:Season:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_1gfy8h11vto1zn12vkc8o1ac8ujx.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/25/2026 07:51:57 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>0</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Month</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Month</remote-alias>
+              <ordinal>1</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Day</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Day]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Day</remote-alias>
+              <ordinal>2</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Day of week</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Day of week]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Day of week</remote-alias>
+              <ordinal>3</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Quarter</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Quarter]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Quarter</remote-alias>
+              <ordinal>4</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Time_Index</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Time_Index]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Time_Index</remote-alias>
+              <ordinal>5</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lag_1</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Lag_1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lag_1</remote-alias>
+              <ordinal>6</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>86</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lag_7</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Lag_7]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lag_7</remote-alias>
+              <ordinal>7</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>86</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lag_14</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Lag_14]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lag_14</remote-alias>
+              <ordinal>8</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>85</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lag_30</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Lag_30]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lag_30</remote-alias>
+              <ordinal>9</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>85</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Rolling_14</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Rolling_14]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Rolling_14</remote-alias>
+              <ordinal>10</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Avg of week</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Avg of week]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Avg of week</remote-alias>
+              <ordinal>11</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lag_7_rolling_mean</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Lag_7_rolling_mean]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lag_7_rolling_mean</remote-alias>
+              <ordinal>12</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lag_14_rolling_std</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Lag_14_rolling_std]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lag_14_rolling_std</remote-alias>
+              <ordinal>13</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Quantity</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Quantity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Quantity</remote-alias>
+              <ordinal>14</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Qty_x_AvgWeek</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Qty_x_AvgWeek]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Qty_x_AvgWeek</remote-alias>
+              <ordinal>15</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>month_sin</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[month_sin]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>month_sin</remote-alias>
+              <ordinal>16</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>month_cos</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[month_cos]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>month_cos</remote-alias>
+              <ordinal>17</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dow_sin</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[dow_sin]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>dow_sin</remote-alias>
+              <ordinal>18</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dow_cos</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[dow_cos]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>dow_cos</remote-alias>
+              <ordinal>19</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Season</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Season]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Season</remote-alias>
+              <ordinal>20</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>expanding_mean</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[expanding_mean]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>expanding_mean</remote-alias>
+              <ordinal>21</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>22</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Predicted Sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Predicted Sales]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Predicted Sales</remote-alias>
+              <ordinal>23</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>86</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>error</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[error]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>error</remote-alias>
+              <ordinal>24</ordinal>
+              <family>future_sales_100.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>86</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Season:nk]' type='palette'>
+            <map to='#f28e2b'>
+              <bucket>&quot;Summer&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Spring&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='future_sales_100.csv' id='future_sales_100.csv_5333DFBC58C346B1B6A7C1E31613561E'>
+            <properties context=''>
+              <relation connection='textscan.01ctnwj0kdk2zk14q2hl60bbe6wk' name='future_sales_100.csv' table='[future_sales_100#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='Year' ordinal='0' />
+                  <column datatype='integer' name='Month' ordinal='1' />
+                  <column datatype='integer' name='Day' ordinal='2' />
+                  <column datatype='integer' name='Day of week' ordinal='3' />
+                  <column datatype='integer' name='Quarter' ordinal='4' />
+                  <column datatype='integer' name='Time_Index' ordinal='5' />
+                  <column datatype='real' name='Lag_1' ordinal='6' />
+                  <column datatype='real' name='Lag_7' ordinal='7' />
+                  <column datatype='real' name='Lag_14' ordinal='8' />
+                  <column datatype='real' name='Lag_30' ordinal='9' />
+                  <column datatype='real' name='Rolling_14' ordinal='10' />
+                  <column datatype='real' name='Avg of week' ordinal='11' />
+                  <column datatype='real' name='Lag_7_rolling_mean' ordinal='12' />
+                  <column datatype='real' name='Lag_14_rolling_std' ordinal='13' />
+                  <column datatype='integer' name='Quantity' ordinal='14' />
+                  <column datatype='real' name='Qty_x_AvgWeek' ordinal='15' />
+                  <column datatype='real' name='month_sin' ordinal='16' />
+                  <column datatype='real' name='month_cos' ordinal='17' />
+                  <column datatype='real' name='dow_sin' ordinal='18' />
+                  <column datatype='real' name='dow_cos' ordinal='19' />
+                  <column datatype='string' name='Season' ordinal='20' />
+                  <column datatype='real' name='expanding_mean' ordinal='21' />
+                  <column datatype='date' name='Date' ordinal='22' />
+                  <column datatype='real' name='Predicted Sales' ordinal='23' />
+                  <column datatype='real' name='error' ordinal='24' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='predictions_tableau' inline='true' name='federated.0ozfcqj0jjqx8n1ap3ecu19awjzn' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='predictions_tableau' name='textscan.0lo34af0r5cezy11w075t1hto4ty'>
+            <connection class='textscan' directory='Data/Task 1 - Sales &amp; Demand Forecasting for Businesses' filename='predictions_tableau.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0lo34af0r5cezy11w075t1hto4ty' name='predictions_tableau.csv' table='[predictions_tableau#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='Days' ordinal='0' />
+            <column datatype='integer' name='Date' ordinal='1' />
+            <column datatype='real' name='Actual Sales' ordinal='2' />
+            <column datatype='real' name='Predicted Sales' ordinal='3' />
+            <column datatype='real' name='Residual' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[predictions_tableau.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Days</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Days]</local-name>
+            <parent-name>[predictions_tableau.csv]</parent-name>
+            <remote-alias>Days</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[predictions_tableau.csv_B3C854978B804D59AE84CFB68D9C4705]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[predictions_tableau.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[predictions_tableau.csv_B3C854978B804D59AE84CFB68D9C4705]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Actual Sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Actual Sales]</local-name>
+            <parent-name>[predictions_tableau.csv]</parent-name>
+            <remote-alias>Actual Sales</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[predictions_tableau.csv_B3C854978B804D59AE84CFB68D9C4705]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Predicted Sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Predicted Sales]</local-name>
+            <parent-name>[predictions_tableau.csv]</parent-name>
+            <remote-alias>Predicted Sales</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[predictions_tableau.csv_B3C854978B804D59AE84CFB68D9C4705]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Residual</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Residual]</local-name>
+            <parent-name>[predictions_tableau.csv]</parent-name>
+            <remote-alias>Residual</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[predictions_tableau.csv_B3C854978B804D59AE84CFB68D9C4705]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' name='[Actual Sales]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Predicted Sales]' role='measure' type='quantitative' />
+      <column caption='predictions_tableau.csv' datatype='table' name='[__tableau_internal_object_id__].[predictions_tableau.csv_B3C854978B804D59AE84CFB68D9C4705]' role='measure' type='quantitative' />
+      <column-instance column='[Actual Sales]' derivation='Sum' name='[sum:Actual Sales:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Predicted Sales]' derivation='Sum' name='[sum:Predicted Sales:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='false' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_194yvlb1f8yifo1d7yfh809u83rl.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/25/2026 08:06:28 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Days</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Days]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Days</remote-alias>
+              <ordinal>0</ordinal>
+              <family>predictions_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>248</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[predictions_tableau.csv_B3C854978B804D59AE84CFB68D9C4705]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>predictions_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>248</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[predictions_tableau.csv_B3C854978B804D59AE84CFB68D9C4705]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Actual Sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Actual Sales]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Actual Sales</remote-alias>
+              <ordinal>2</ordinal>
+              <family>predictions_tableau.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>248</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[predictions_tableau.csv_B3C854978B804D59AE84CFB68D9C4705]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Predicted Sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Predicted Sales]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Predicted Sales</remote-alias>
+              <ordinal>3</ordinal>
+              <family>predictions_tableau.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>248</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[predictions_tableau.csv_B3C854978B804D59AE84CFB68D9C4705]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Residual</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Residual]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Residual</remote-alias>
+              <ordinal>4</ordinal>
+              <family>predictions_tableau.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>248</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[predictions_tableau.csv_B3C854978B804D59AE84CFB68D9C4705]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[sum:Actual Sales:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[sum:Predicted Sales:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='predictions_tableau.csv' id='predictions_tableau.csv_B3C854978B804D59AE84CFB68D9C4705'>
+            <properties context=''>
+              <relation connection='textscan.0lo34af0r5cezy11w075t1hto4ty' name='predictions_tableau.csv' table='[predictions_tableau#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='Days' ordinal='0' />
+                  <column datatype='integer' name='Date' ordinal='1' />
+                  <column datatype='real' name='Actual Sales' ordinal='2' />
+                  <column datatype='real' name='Predicted Sales' ordinal='3' />
+                  <column datatype='real' name='Residual' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Actual vs Predicted Sales'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='predictions_tableau' name='federated.0ozfcqj0jjqx8n1ap3ecu19awjzn' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ozfcqj0jjqx8n1ap3ecu19awjzn'>
+            <column datatype='real' name='[Actual Sales]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Days]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Predicted Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Days]' derivation='None' name='[none:Days:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Actual Sales]' derivation='Sum' name='[sum:Actual Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Predicted Sales]' derivation='Sum' name='[sum:Predicted Sales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[sum:Predicted Sales:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[sum:Actual Sales:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[sum:Predicted Sales:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[sum:Actual Sales:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[Multiple Values]</rows>
+        <cols>[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[none:Days:qk]</cols>
+      </table>
+      <simple-id uuid='{6166A0D1-5370-4AE8-B48A-5962267053AE}' />
+    </worksheet>
+    <worksheet name='Last 100 days'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' italic='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='predictions_tableau' name='federated.0ozfcqj0jjqx8n1ap3ecu19awjzn' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ozfcqj0jjqx8n1ap3ecu19awjzn'>
+            <column datatype='real' name='[Actual Sales]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Days]' role='measure' type='quantitative' />
+            <column-instance column='[Days]' derivation='None' name='[none:Days:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Actual Sales]' derivation='Sum' name='[sum:Actual Sales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[none:Days:qk]' included-values='in-range'>
+            <min>147</min>
+            <max>247</max>
+          </filter>
+          <slices>
+            <column>[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[none:Days:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[none:Days:qk]' scope='cols' value='Days' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[sum:Actual Sales:qk]</rows>
+        <cols>[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[none:Days:qk]</cols>
+      </table>
+      <simple-id uuid='{CB2EE619-8FB3-4476-BE9E-2CA571399FE2}' />
+    </worksheet>
+    <worksheet name='Monthly Sales'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' italic='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='future_sales_100' name='federated.0x06hic14s4b3u13tdxif0vhgxwi' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x06hic14s4b3u13tdxif0vhgxwi'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Predicted Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Predicted Sales]' derivation='Sum' name='[sum:Predicted Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Month-Trunc' name='[tmn:Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:Predicted Sales:qk]</rows>
+        <cols>[federated.0x06hic14s4b3u13tdxif0vhgxwi].[tmn:Date:qk]</cols>
+      </table>
+      <simple-id uuid='{D6261823-A8A6-4FE4-8164-CBCD40D43C97}' />
+    </worksheet>
+    <worksheet name='Next 100 days'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' italic='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='future_sales_100' name='federated.0x06hic14s4b3u13tdxif0vhgxwi' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x06hic14s4b3u13tdxif0vhgxwi'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Predicted Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Predicted Sales]' derivation='Sum' name='[sum:Predicted Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Day-Trunc' name='[tdy:Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:Predicted Sales:qk]' field-type='quantitative' max='2400.0' min='2200.0' range-type='fixed' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[tdy:Date:qk]' scope='cols' value='Days' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:Predicted Sales:qk]</rows>
+        <cols>[federated.0x06hic14s4b3u13tdxif0vhgxwi].[tdy:Date:qk]</cols>
+      </table>
+      <simple-id uuid='{5B51090A-9077-4D41-9FA2-604F9D26CA8D}' />
+    </worksheet>
+    <worksheet name='Prediction Error'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' italic='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='future_sales_100' name='federated.0x06hic14s4b3u13tdxif0vhgxwi' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x06hic14s4b3u13tdxif0vhgxwi'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='Error' datatype='real' name='[error]' role='measure' type='quantitative' />
+            <column-instance column='[error]' derivation='Sum' name='[sum:error:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Day-Trunc' name='[tdy:Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:error:qk]' field-type='quantitative' max='-2200.0' min='-2400.0' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:error:qk]</rows>
+        <cols>[federated.0x06hic14s4b3u13tdxif0vhgxwi].[tdy:Date:qk]</cols>
+      </table>
+      <simple-id uuid='{854B8907-0DC7-47D6-840B-6EBB32479476}' />
+    </worksheet>
+    <worksheet name='Qty x AvgWeek'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='future_sales_100' name='federated.0x06hic14s4b3u13tdxif0vhgxwi' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x06hic14s4b3u13tdxif0vhgxwi'>
+            <column datatype='integer' name='[Day]' role='dimension' type='quantitative' />
+            <column caption='Qty x AvgWeek' datatype='real' name='[Qty_x_AvgWeek]' role='dimension' type='quantitative' />
+            <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
+            <column-instance column='[Day]' derivation='None' name='[none:Day:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Qty_x_AvgWeek]' derivation='None' name='[none:Qty_x_AvgWeek:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Quantity]' derivation='None' name='[none:Quantity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Quantity]' derivation='Sum' name='[sum:Quantity:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:Quantity:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#e5e5e5</color>
+                <color>#e3e3e3</color>
+                <color>#e1e1e1</color>
+                <color>#dfdfdf</color>
+                <color>#dddddd</color>
+                <color>#dbdbdb</color>
+                <color>#d9d9d9</color>
+                <color>#bccecd</color>
+                <color>#a1c3c1</color>
+                <color>#88b8b6</color>
+                <color>#71adaa</color>
+                <color>#5ca29f</color>
+                <color>#499894</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:Quantity:qk]' />
+              <size column='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[none:Quantity:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0x06hic14s4b3u13tdxif0vhgxwi].[none:Qty_x_AvgWeek:qk]</rows>
+        <cols>[federated.0x06hic14s4b3u13tdxif0vhgxwi].[none:Day:qk]</cols>
+      </table>
+      <simple-id uuid='{9771FFCB-430D-42B7-9C17-3C62B3F2D344}' />
+    </worksheet>
+    <worksheet name='Sales Mean of 14 days'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' italic='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='future_sales_100' name='federated.0x06hic14s4b3u13tdxif0vhgxwi' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x06hic14s4b3u13tdxif0vhgxwi'>
+            <column datatype='real' name='[Predicted Sales]' role='measure' type='quantitative' />
+            <column caption='Rolling 14' datatype='real' name='[Rolling_14]' role='measure' type='quantitative' />
+            <column-instance column='[Rolling_14]' derivation='None' name='[none:Rolling_14:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Predicted Sales]' derivation='Sum' name='[sum:Predicted Sales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:Predicted Sales:qk]' field-type='quantitative' max='2400.0' min='2200.0' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:Predicted Sales:qk]</rows>
+        <cols>[federated.0x06hic14s4b3u13tdxif0vhgxwi].[none:Rolling_14:qk]</cols>
+      </table>
+      <simple-id uuid='{A3950D75-ECC4-493F-9283-86E07E24B198}' />
+    </worksheet>
+    <worksheet name='Sales by Day of Week'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' italic='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='future_sales_100' name='federated.0x06hic14s4b3u13tdxif0vhgxwi' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x06hic14s4b3u13tdxif0vhgxwi'>
+            <column datatype='integer' name='[Day of week]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Predicted Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Day of week]' derivation='None' name='[none:Day of week:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Predicted Sales]' derivation='Sum' name='[sum:Predicted Sales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[none:Day of week:qk]' field-type='quantitative' max='7' min='0' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:Predicted Sales:qk]</rows>
+        <cols>[federated.0x06hic14s4b3u13tdxif0vhgxwi].[none:Day of week:qk]</cols>
+      </table>
+      <simple-id uuid='{851FC6CB-1C74-4448-8449-35C96D92499F}' />
+    </worksheet>
+    <worksheet name='Sales by Season'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' italic='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='future_sales_100' name='federated.0x06hic14s4b3u13tdxif0vhgxwi' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x06hic14s4b3u13tdxif0vhgxwi'>
+            <column datatype='real' name='[Predicted Sales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Season]' role='dimension' type='nominal' />
+            <column-instance column='[Season]' derivation='None' name='[none:Season:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Predicted Sales]' derivation='Sum' name='[sum:Predicted Sales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='height-header' value='18' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[none:Season:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:Predicted Sales:qk]</rows>
+        <cols>[federated.0x06hic14s4b3u13tdxif0vhgxwi].[none:Season:nk]</cols>
+      </table>
+      <simple-id uuid='{F54B30AE-C226-410D-AA48-877C07714547}' />
+    </worksheet>
+    <worksheet name='Sheet 10'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='future_sales_100' name='federated.0x06hic14s4b3u13tdxif0vhgxwi' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x06hic14s4b3u13tdxif0vhgxwi'>
+            <column datatype='real' name='[Avg of week]' role='measure' type='quantitative' />
+            <column caption='Lag 14' datatype='real' name='[Lag_14]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Predicted Sales]' role='measure' type='quantitative' />
+            <column caption='Rolling 14' datatype='real' name='[Rolling_14]' role='measure' type='quantitative' />
+            <column-instance column='[Avg of week]' derivation='Avg' name='[avg:Avg of week:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Lag_14]' derivation='Sum' name='[sum:Lag_14:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Predicted Sales]' derivation='Sum' name='[sum:Predicted Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Rolling_14]' derivation='Sum' name='[sum:Rolling_14:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:Predicted Sales:qk]' />
+              <text column='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[avg:Avg of week:qk]' />
+              <text column='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:Rolling_14:qk]' />
+              <text column='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:Lag_14:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontname='Bahnschrift' fontsize='14'>Total Sales:</run>
+                <run bold='true' fontname='Bahnschrift' fontsize='14'><![CDATA[ <[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:Predicted Sales:qk]>             ]]></run>
+                <run>Æ&#10;</run>
+                <run fontname='Bahnschrift' fontsize='14'>Average Sales of Week:</run>
+                <run bold='true' fontname='Bahnschrift' fontsize='14'><![CDATA[ <[federated.0x06hic14s4b3u13tdxif0vhgxwi].[avg:Avg of week:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontname='Bahnschrift' fontsize='14'>Mean of 14 Days: </run>
+                <run bold='true' fontname='Bahnschrift' fontsize='14'><![CDATA[<[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:Rolling_14:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontname='Bahnschrift' fontsize='14'>Lag of 14 Days:</run>
+                <run bold='true' fontname='Bahnschrift' fontsize='14'><![CDATA[ <[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:Lag_14:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{5B86B3C0-EFA0-452C-96ED-B70E090555DB}' />
+    </worksheet>
+    <worksheet name='Sheet 11'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='future_sales_100' name='federated.0x06hic14s4b3u13tdxif0vhgxwi' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x06hic14s4b3u13tdxif0vhgxwi'>
+            <column caption='Error' datatype='real' name='[error]' role='measure' type='quantitative' />
+            <column-instance column='[error]' derivation='Sum' name='[sum:error:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:error:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontname='Bahnschrift' fontsize='14'>Sum of Error: </run>
+                <run bold='true' fontname='Bahnschrift' fontsize='14'><![CDATA[<[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:error:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000dd' fontname='Bahnschrift' fontsize='14'>MAE: </run>
+                <run bold='true' fontcolor='#000000dd' fontname='Bahnschrift' fontsize='14'>1112.5888588404457</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000dd' fontname='Bahnschrift' fontsize='14'>RMSE: </run>
+                <run bold='true' fontcolor='#000000dd' fontname='Bahnschrift' fontsize='14'>1765.5190078864769</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000dd' fontname='Bahnschrift' fontsize='14'>R²: </run>
+                <run bold='true' fontcolor='#000000dd' fontname='Bahnschrift' fontsize='14'>0.48777512058516115</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{FD01157E-D283-4D79-AD56-6A399D91F71E}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Sales Forecasting'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Wide Latin'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='860' maxwidth='1350' minheight='560' minwidth='420' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98122' id='5' param='vert' type-v2='layout-flow' w='98814' x='593' y='939'>
+            <zone h='5282' id='7' type-v2='title' w='98814' x='593' y='939'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='92840' id='6' type-v2='layout-basic' w='98814' x='593' y='6221' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='33333' id='8' name='Monthly Sales' w='33259' x='1926' y='7512' />
+        <zone h='33333' id='9' name='Prediction Error' w='33333' x='37630' y='7277' />
+        <zone h='33333' id='10' name='Sales by Season' w='26593' x='71630' y='6925' />
+        <zone h='7512' id='11' name='Sales by Season' pane-specification-id='0' param='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[none:Season:nk]' type-v2='color' w='11200' x='58960' y='9155' />
+        <zone h='33333' id='12' name='Sales Mean of 14 days' w='30889' x='815' y='41549' />
+        <zone h='33333' id='13' name='Last 100 days' w='33333' x='32444' y='40962' />
+        <zone h='33333' id='14' name='Next 100 days' w='33333' x='65630' y='39906' />
+        <zone h='23357' id='15' name='Sales by Day of Week' w='33333' x='2000' y='74765' />
+        <zone h='15610' id='16' name='Sheet 10' show-title='false' w='29259' x='37481' y='80047' />
+        <zone h='16080' id='17' name='Sheet 11' show-title='false' w='22963' x='65852' y='78286' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontname='Wide Latin'>&lt;Sheet Name&gt;</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='2400' minheight='2400' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='19' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98122' id='18' param='vert' type-v2='layout-flow' w='98814' x='593' y='939'>
+                <zone h='5282' id='7' type-v2='title' w='98814' x='593' y='939'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='33333' id='10' is-fixed='true' name='Sales by Season' w='26593' x='71630' y='6925'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7512' id='11' name='Sales by Season' pane-specification-id='0' param='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[none:Season:nk]' type-v2='color' w='11200' x='58960' y='9155'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='33333' id='9' is-fixed='true' name='Prediction Error' w='33333' x='37630' y='7277'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='33333' id='8' is-fixed='true' name='Monthly Sales' w='33259' x='1926' y='7512'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='33333' id='14' is-fixed='true' name='Next 100 days' w='33333' x='65630' y='39906'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='33333' id='13' is-fixed='true' name='Last 100 days' w='33333' x='32444' y='40962'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='33333' id='12' is-fixed='true' name='Sales Mean of 14 days' w='30889' x='815' y='41549'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='201' h='23357' id='15' is-fixed='true' name='Sales by Day of Week' w='33333' x='2000' y='74765'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='139' h='16080' id='17' is-fixed='true' name='Sheet 11' show-title='false' w='22963' x='65852' y='78286'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='135' h='15610' id='16' is-fixed='true' name='Sheet 10' show-title='false' w='29259' x='37481' y='80047'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{751C92FE-A764-431B-A840-3AB7FFD5C404}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='63'>
+    <window class='worksheet' name='Monthly Sales'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A28D9917-1FC9-4D07-AFAB-709EA846086F}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Sales Forecasting'>
+      <viewpoints>
+        <viewpoint name='Last 100 days'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Monthly Sales'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Next 100 days'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Prediction Error'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sales Mean of 14 days'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sales by Day of Week'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sales by Season'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 10' />
+        <viewpoint name='Sheet 11' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{EDD45CB5-FB9F-47D0-AE0B-518399574135}' />
+    </window>
+    <window class='worksheet' name='Prediction Error'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1214FA49-9256-42F7-B7AB-C9CFAD165B56}' />
+    </window>
+    <window class='worksheet' name='Sales by Season'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[none:Season:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{45ECD15D-6527-45BA-AF36-F4888CB8FFB4}' />
+    </window>
+    <window class='worksheet' name='Sales Mean of 14 days'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2AB6553C-3615-42D4-82D0-70260F9014D8}' />
+    </window>
+    <window class='worksheet' name='Actual vs Predicted Sales'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EE3222ED-67F1-4FC3-8721-F1D5E1E2B2B9}' />
+    </window>
+    <window class='worksheet' name='Last 100 days'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0ozfcqj0jjqx8n1ap3ecu19awjzn].[none:Days:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CB1A1E10-154B-4B71-8EAA-8D8B12BB17ED}' />
+    </window>
+    <window class='worksheet' name='Next 100 days'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{20954A0A-BB2D-47F4-B1F3-D18ADF368BE6}' />
+    </window>
+    <window class='worksheet' name='Sales by Day of Week'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9743F30C-E278-43C2-AD5D-5F42CD18C9DD}' />
+    </window>
+    <window class='worksheet' name='Qty x AvgWeek'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[none:Quantity:qk]' type='size' />
+            <card pane-specification-id='2' param='[federated.0x06hic14s4b3u13tdxif0vhgxwi].[sum:Quantity:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8E9F5FD1-B698-4DC8-8B52-B9F35FA60ED6}' />
+    </window>
+    <window class='worksheet' name='Sheet 10'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{00F57664-753E-4EA7-919C-7F59FD6FBDDE}' />
+    </window>
+    <window class='worksheet' name='Sheet 11'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8D3E8545-1CFF-4C6F-AB3D-4B7FE690D8E7}' />
+    </window>
+  </windows>
+</workbook>
